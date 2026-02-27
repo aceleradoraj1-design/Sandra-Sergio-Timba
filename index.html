@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selemane Cardula | Portfólio CV</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+/* CONTAINER */
+
+.container{
+width:95%;
+max-width:1200px;
+display:flex;
+background:#111827;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
+}
+
+/* LADO ESQUERDO */
+
+.left{
+width:35%;
+background:#0b1120;
+padding:40px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.profile-img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #00c3ff;
+}
+
+.left h1{
+font-size:22px;
+}
+
+.left p{
+font-size:14px;
+color:#cbd5e1;
+}
+
+/* LADO DIREITO */
+
+.right{
+width:65%;
+padding:40px;
+overflow-y:auto;
+}
+
+/* BOTÕES */
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:30px;
+}
+
+nav button{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+background:#00c3ff;
+color:black;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+nav button:hover{
+transform:scale(1.08);
+opacity:0.8;
+}
+
+/* SEÇÕES */
+
+.section{
+display:none;
+animation:fade 0.5s ease;
+}
+
+.section.active{
+display:block;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+/* BARRAS */
+
+.bar{
+background:#333;
+height:8px;
+border-radius:10px;
+overflow:hidden;
+margin-top:5px;
+}
+
+.bar-fill{
+height:100%;
+width:0;
+background:#00c3ff;
+transition:1.5s;
+}
+
+/* MAPA */
+
+iframe{
+border-radius:15px;
+margin-top:15px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+.container{
+flex-direction:column;
+}
+.left,.right{
+width:100%;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- LADO ESQUERDO -->
+<div class="left">
+
+<img src="IMG-20260114-WA0008.jpg" class="profile-img">
+
+<h1>Selemane Cardula</h1>
+
+<p>📍 Maputo, Moçambique</p>
+<p>📞 +258 842 490 129</p>
+<p>📧 selemane@example.com</p>
+
+<p>
+Desenvolvedor Web especializado em criação de sites modernos,
+sistemas digitais e soluções académicas e empresariais.
+</p>
+
+</div>
+
+<!-- LADO DIREITO -->
+<div class="right">
+
+<!-- MENU -->
+<nav>
+<button onclick="showSection('about')">Sobre</button>
+<button onclick="showSection('skills')">Habilidades</button>
+<button onclick="showSection('languages')">Idiomas</button>
+<button onclick="showSection('experience')">Experiência</button>
+<button onclick="showSection('contact')">Contato</button>
+</nav>
+<!-- BOAS VINDAS -->
+<div id="welcome" class="section active">
+<div class="card">
+<h2>👋 Bem-Vindo ao Meu Portfólio</h2>
+<br>
+<p>
+Este é o meu currículo digital onde apresento minha formação,
+habilidades, experiência e projetos profissionais.
+</p>
+<br>
+<p>
+Explore as secções abaixo para conhecer melhor o meu trabalho.
+</p>
+</div>
+</div>
+
+<!-- SOBRE -->
+<div id="about" class="section">
+<div class="card">
+<h2>Sobre Mim</h2>
+<br>
+<p><strong>🎂 Idade:</strong> 22 anos</p>
+<p><strong>📍 Local:</strong> Maputo</p>
+<p><strong>🎯 Objetivo:</strong> Criar soluções digitais profissionais</p>
+<br>
+<p>
+Tenho experiência em desenvolvimento web, criação de sistemas e projetos digitais
+com foco em qualidade e organização.
+</p>
+
+</div>
+</div>
+
+<!-- HABILIDADES -->
+<div id="skills" class="section">
+<div class="card">
+<h2>Habilidades Técnicas</h2>
+
+<p>HTML</p>
+<div class="bar"><div class="bar-fill" data-width="95%"></div></div>
+
+<p style="margin-top:10px;">CSS</p>
+<div class="bar"><div class="bar-fill" data-width="90%"></div></div>
+
+<p style="margin-top:10px;">JavaScript</p>
+<div class="bar"><div class="bar-fill" data-width="75%"></div></div>
+
+<p style="margin-top:10px;">React</p>
+<div class="bar"><div class="bar-fill" data-width="70%"></div></div>
+
+<p style="margin-top:10px;">Excel Avançado</p>
+<div class="bar"><div class="bar-fill" data-width="85%"></div></div>
+
+</div>
+</div>
+
+<!-- IDIOMAS -->
+<div id="languages" class="section">
+<div class="card">
+<h2>Idiomas</h2>
+
+<p>🇵🇹 Português – Fluente</p>
+<div class="bar"><div class="bar-fill" data-width="100%"></div></div>
+
+<p style="margin-top:15px;">🇿🇦 Changana – Fluente</p>
+<div class="bar"><div class="bar-fill" data-width="100%"></div></div>
+
+<p style="margin-top:15px;">🇬🇧 Inglês – Razoável</p>
+<div class="bar"><div class="bar-fill" data-width="60%"></div></div>
+
+</div>
+</div>
+
+<!-- EXPERIÊNCIA -->
+<div id="experience" class="section">
+<div class="card">
+<h2>Experiência</h2>
+<br>
+<p>✔ Desenvolvimento de websites institucionais</p>
+<p>✔ Sistemas académicos digitais</p>
+<p>✔ Projetos pessoais e freelance</p>
+</div>
+</div>
+
+<!-- CONTATO -->
+<div id="contact" class="section">
+<div class="card">
+<h2>Contato</h2>
+
+<p>📍 Maputo, Moçambique</p>
+<p>📞 +258 842 490 129</p>
+<p>📧 selemane@example.com</p>
+
+<h3 style="margin-top:20px;">🗺 Minha Localização</h3>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.739!2d32.5892!3d-25.9692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eee7b4f3f3f3f3f%3A0x0000000000000000!2sMaputo!5e0!3m2!1spt!2smz!4v1700000000000"
+width="100%"
+height="250"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* TROCAR SEÇÕES */
+
+function showSection(id){
+
+document.querySelectorAll(".section").forEach(sec=>{
+sec.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+/* ANIMAÇÃO DAS BARRAS */
+
+const bars=document.querySelectorAll(".bar-fill");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.width=entry.target.getAttribute("data-width");
+}
+});
+},{threshold:0.5});
+
+bars.forEach(bar=>observer.observe(bar));
+
+</script>
+
+</body>
+</html>
