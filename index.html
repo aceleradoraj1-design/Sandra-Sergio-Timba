@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Profissional | Sandra Sergio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(120deg,#0f1d53,#0e2863);
+color:white;
+}
+
+/* MENU */
+nav{
+background:#48c3f0;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+border-bottom:1px solid #479bd6;
+}
+
+nav h2{
+color:#020617;
+}
+
+nav a{
+color:#020617;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+padding:6px 12px;
+border-radius:6px;
+transition:0.3s;
+font-weight:600;
+}
+
+nav a:hover{
+background:#020617;
+color:white;
+}
+
+/* HOME */
+.home{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:40px;
+flex-wrap:wrap;
+margin-top:60px;
+}
+
+.perfil{
+width:260px;
+height:260px;
+border-radius:50%;
+border:5px solid #38bdf8;
+object-fit:cover;
+box-shadow:0 0 25px rgba(56,189,248,0.5);
+transition:0.4s;
+}
+
+.perfil:hover{
+transform:scale(1.05);
+}
+
+.botao-contato{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#38bdf8;
+color:#020617;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 0 15px rgba(56,189,248,0.5);
+}
+
+.botao-contato:hover{
+background:white;
+transform:scale(1.05);
+}
+
+.home h1{
+font-size:42px;
+}
+
+.home span{
+color:#38bdf8;
+}
+
+.home p{
+color:#cbd5f5;
+margin-top:10px;
+max-width:500px;
+}
+
+/* SEÇÕES */
+section{
+padding:90px 10%;
+}
+
+.titulo{
+font-size:30px;
+margin-bottom:25px;
+color:#38bdf8;
+position:relative;
+}
+
+/* SOBRE INTERNACIONAL */
+.sobre{
+background:linear-gradient(135deg,#111c44,#0c1440);
+position:relative;
+overflow:hidden;
+}
+
+.sobre-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+animation:fadeUp 1.2s ease forwards;
+opacity:0;
+}
+
+.sobre-foto{
+width:240px;
+height:240px;
+border-radius:20px;
+object-fit:cover;
+border:4px solid #38bdf8;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+transition:0.4s;
+}
+
+.sobre-foto:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 25px 50px rgba(56,189,248,0.4);
+}
+
+.sobre-texto{
+max-width:600px;
+color:#dbeafe;
+line-height:1.8;
+}
+
+.sobre-texto p{
+margin-bottom:15px;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* GALERIA */
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+transition:0.3s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+/* PROJETOS */
+.projetos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#020617;
+padding:20px;
+border-radius:12px;
+border:1px solid #1e293b;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#38bdf8;
+}
+
+.card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* HABILIDADES */
+.skills div{
+margin-bottom:15px;
+}
+
+.barra{
+background:#1e293b;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progresso{
+background:#38bdf8;
+height:10px;
+}
+
+/* CONTATO */
+.contato{
+text-align:center;
+background:#0c1440;
+}
+
+.redes{
+margin:20px 0;
+}
+
+.redes a{
+display:inline-block;
+margin:10px;
+padding:10px 20px;
+background:#38bdf8;
+color:#020617;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.redes a:hover{
+background:white;
+transform:scale(1.05);
+}
+
+.mapa{
+width:100%;
+height:250px;
+border-radius:12px;
+overflow:hidden;
+margin-top:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Sandra Sergio</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#sobre">Sobre</a>
+<a href="#trabalhos">Trabalhos</a>
+<a href="#projetos">Projetos</a>
+<a href="#skills">Habilidades</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+
+<!-- HOME -->
+<section class="home" id="home">
+
+<div style="text-align:center;">
+<img src="c:\Users\david\OneDrive\Pictures\Camera Roll\WIN_20260218_17_50_54_Pro.jpg" class="perfil">
+<br>
+<a href="#contato" class="botao-contato">Contactar-me</a>
+</div>
+
+<div>
+<h1>Olá, sou <span>Sandra Sergio</span></h1>
+<p>Desenvolvedora web focada em criar sistemas modernos, sites profissionais e soluções digitais organizadas.</p>
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+<h2 class="titulo">Sobre mim</h2>
+
+<div class="sobre-container">
+
+<img src="c:\Users\david\OneDrive\Pictures\Camera Roll\WIN_20260218_17_50_54_Pro.jpg" class="sobre-foto">
+
+<div class="sobre-texto">
+<p>
+Sou desenvolvedora web apaixonada por tecnologia e inovação digital.
+Transformo ideias em soluções modernas, funcionais e visualmente atrativas.
+</p>
+
+<p>
+Tenho experiência na criação de sites institucionais, sistemas de gestão e plataformas digitais,
+sempre focando em organização, segurança e excelente experiência do utilizador.
+</p>
+
+<p>
+O meu objetivo é desenvolver projetos que não sejam apenas bonitos,
+mas que também resolvam problemas reais e tragam impacto positivo para pessoas e empresas.
+</p>
+
+<p>
+Estou em constante evolução, acompanhando tendências globais do desenvolvimento web
+e aprimorando minhas competências técnicas.
+</p>
+</div>
+
+</div>
+
+</section>
+</div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+<h2 class="titulo">Projetos</h2>
+
+<div class="projetos">
+
+<div class="card">
+<h3>SERVIC DOCUMENTS</h3>
+<p>Sistema para guardar e organizar documentos digitais com segurança.</p>
+</div>
+
+<div class="card">
+<h3>Site Institucional</h3>
+<p>Website profissional com design moderno e navegação simples para empresas.</p>
+</div>
+
+<div class="card">
+<h3>Plataforma de Microcrédito</h3>
+<p>Sistema digital para gestão de microcrédito com cadastro de clientes e controlo financeiro.</p>
+</div>
+
+</div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="skills">
+<h2 class="titulo">Habilidades</h2>
+
+<div class="skills">
+<div>
+<p>HTML – 90%</p>
+<div class="barra"><div class="progresso" style="width:90%"></div></div>
+</div>
+
+<div>
+<p>CSS – 85%</p>
+<div class="barra"><div class="progresso" style="width:85%"></div></div>
+</div>
+
+<div>
+<p>JavaScript – 75%</p>
+<div class="barra"><div class="progresso" style="width:75%"></div></div>
+</div>
+
+<div>
+<p>PHP – 70%</p>
+<div class="barra"><div class="progresso" style="width:70%"></div></div>
+</div>
+</div>
+
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+<h2 class="titulo">Contato</h2>
+
+<p>Telefone / WhatsApp: 865416735</p>
+<p>Email: sandra@email.com</p>
+
+<div class="redes">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
+</div>
+
+<div class="mapa">
+<iframe src="https://www.google.com/maps?q=Moçambique&output=embed"
+width="100%" height="100%" style="border:0;" allowfullscreen></iframe>
+</div>
+
+</section>
+
+<footer>
+© 2026 | Portfólio Profissional de Sandra Sergio
+</footer>
+
+</body>
+</html>
