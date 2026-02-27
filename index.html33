@@ -334,4 +334,5 @@ bars.forEach(bar=>observer.observe(bar));
 </script>
 
 </body>
+
 </html>
